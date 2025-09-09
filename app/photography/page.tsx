@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Photography() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
@@ -9,12 +11,12 @@ export default function Photography() {
           Coming Soon
         </p>
         <div className="mt-8">
-          <a
+          <Link
             href="/"
             className="inline-block bg-slate-700 text-white px-8 py-4 font-bold text-lg uppercase tracking-wider hover:bg-slate-600 transition-colors duration-200"
           >
             Back to Home
-          </a>
+          </Link>
         </div>
       </div>
     </div>

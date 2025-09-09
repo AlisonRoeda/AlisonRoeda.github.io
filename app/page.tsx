@@ -149,7 +149,7 @@ export default function Home() {
             </h2>
             <div className="space-y-6 text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
               <p>
-                I'm a creative with a deep passion for technology and its power to open doors. I believe 
+                I&apos;m a creative with a deep passion for technology and its power to open doors. I believe 
                 innovation should make creativity and entrepreneurship accessible to everyone, not just a select few.
               </p>
               <p>
