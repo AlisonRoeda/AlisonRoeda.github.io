@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+// Force deployment refresh
 export default function Photography() {
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
