@@ -292,8 +292,11 @@ const GradualBlur: React.FC<PropsWithChildren<GradualBlurProps>> = props => {
 
 const GradualBlurMemo = React.memo(GradualBlur);
 GradualBlurMemo.displayName = 'GradualBlur';
-(GradualBlurMemo as React.ComponentType<GradualBlurProps> & { PRESETS: typeof PRESETS; CURVE_FUNCTIONS: typeof CURVE_FUNCTIONS }).PRESETS = PRESETS;
-(GradualBlurMemo as React.ComponentType<GradualBlurProps> & { PRESETS: typeof PRESETS; CURVE_FUNCTIONS: typeof CURVE_FUNCTIONS }).CURVE_FUNCTIONS = CURVE_FUNCTIONS;
+
+// Add static properties to the component
+(GradualBlurMemo as unknown as { PRESETS: typeof PRESETS; CURVE_FUNCTIONS: typeof CURVE_FUNCTIONS }).PRESETS = PRESETS;
+(GradualBlurMemo as unknown as { PRESETS: typeof PRESETS; CURVE_FUNCTIONS: typeof CURVE_FUNCTIONS }).CURVE_FUNCTIONS = CURVE_FUNCTIONS;
+
 export default GradualBlurMemo;
 
 const injectStyles = () => {
