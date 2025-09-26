@@ -54,7 +54,45 @@ export default function Home() {
           
         {/* Desktop Buttons - Fixed distance from center with different parallax */}
         <div 
-          className="hidden md:block absolute left-1/2 top-[35%] -z-10"
+          className="hidden md:block absolute left-1/2 top-[10%] -z-10"
+          style={{ 
+            transform: `translateX(calc(-95% - 200px)) translateY(${scrollY * 0.2}px)` 
+          }}
+        >
+          <Link
+            href="/projects"
+            className="group block"
+            style={{ pointerEvents: 'auto' }}
+          >
+            <div className="bg-transparent border-8 border-white px-6 sm:px-8 md:px-10 lg:px-12 py-4 sm:py-6 md:py-8 lg:py-10 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 rounded-full">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-white uppercase tracking-wider">
+                PROJECTS
+              </h2>
+            </div>
+          </Link>
+        </div>
+
+        <div 
+          className="hidden md:block absolute left-1/2 top-[10%] -z-10"
+          style={{ 
+            transform: `translateX(calc(-50% + 200px)) translateY(${scrollY * 0.2}px)` 
+          }}
+        >
+          <Link
+            href="/art"
+            className="group block"
+            style={{ pointerEvents: 'auto' }}
+          >
+            <div className="bg-transparent border-8 border-white px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24 py-4 sm:py-6 md:py-8 lg:py-10 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95 rounded-full">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-black text-white uppercase tracking-wider">
+                ART
+              </h2>
+            </div>
+          </Link>
+        </div>
+
+        <div 
+          className="hidden md:block absolute left-1/2 top-[30%] -z-10"
           style={{ 
             transform: `translateX(calc(-95% - 200px)) translateY(${scrollY * 0.2}px)` 
           }}
@@ -73,7 +111,7 @@ export default function Home() {
         </div>
 
         <div 
-          className="hidden md:block absolute left-1/2 top-[35%] -z-10"
+          className="hidden md:block absolute left-1/2 top-[30%] -z-10"
           style={{ 
             transform: `translateX(calc(-20% + 200px)) translateY(${scrollY * 0.2}px)` 
           }}
@@ -101,11 +139,33 @@ export default function Home() {
         >
           <div className="flex flex-col gap-4 w-full max-w-sm mx-auto">
             <Link
+              href="/projects"
+              className="group block w-full"
+            >
+              <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
+                <h2 className="text-lg font-black text-black uppercase tracking-wider">
+                  PROJECTS
+                </h2>
+              </div>
+            </Link>
+            
+            <Link
+              href="/art"
+              className="group block w-full"
+            >
+              <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
+                <h2 className="text-lg font-black text-black uppercase tracking-wider">
+                  ART
+                </h2>
+              </div>
+            </Link>
+            
+            <Link
               href="/graphic-design"
               className="group block w-full"
             >
-              <div className="bg-black/30 border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full">
-                <h2 className="text-lg font-black text-white uppercase tracking-wider">
+              <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
+                <h2 className="text-lg font-black text-black uppercase tracking-wider">
                   GRAPHIC DESIGN
                 </h2>
               </div>
@@ -115,8 +175,8 @@ export default function Home() {
               href="/photography"
               className="group block w-full"
             >
-              <div className="bg-black/30 border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full">
-                <h2 className="text-lg font-black text-white uppercase tracking-wider">
+              <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
+                <h2 className="text-lg font-black text-black uppercase tracking-wider">
                   PHOTOGRAPHY
                 </h2>
               </div>
