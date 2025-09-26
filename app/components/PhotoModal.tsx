@@ -47,10 +47,13 @@ export default function PhotoModal({ isOpen, onClose, src, alt }: PhotoModalProp
           ×
         </button>
         <div className="relative">
-          <img
+          <Image
             src={src}
             alt={alt}
+            width={1200}
+            height={800}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            priority
           />
         </div>
       </div>

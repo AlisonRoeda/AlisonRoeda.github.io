@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Photography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
@@ -63,9 +64,11 @@ export default function Photography() {
             className="break-inside-avoid mb-4 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => openModal(photo)}
           >
-            <img
+            <Image
               src={photo}
               alt={`Photography ${index + 1}`}
+              width={400}
+              height={600}
               className="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               loading="lazy"
             />
@@ -86,10 +89,13 @@ export default function Photography() {
             >
               ×
             </button>
-            <img
+            <Image
               src={selectedPhoto}
               alt="Enlarged photo"
+              width={1200}
+              height={800}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              priority
             />
           </div>
         </div>

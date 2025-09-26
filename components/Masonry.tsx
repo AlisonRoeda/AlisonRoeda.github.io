@@ -1,8 +1,8 @@
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
-  const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
+  const get = useCallback(() => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue, [queries, values, defaultValue]);
 
   const [value, setValue] = useState<number>(get);
 
@@ -10,7 +10,7 @@ const useMedia = (queries: string[], values: number[], defaultValue: number): nu
     const handler = () => setValue(get);
     queries.forEach(q => matchMedia(q).addEventListener('change', handler));
     return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
-  }, [queries]);
+  }, [queries, get]);
 
   return value;
 };
@@ -91,7 +91,7 @@ const Masonry: React.FC<MasonryProps> = ({
   const [containerRef, { width }] = useMeasure<HTMLDivElement>();
   const [imagesReady, setImagesReady] = useState(false);
 
-  const getInitialPosition = (item: GridItem) => {
+  const getInitialPosition = useCallback((item: GridItem) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
     if (!containerRect) return { x: item.x, y: item.y };
 
@@ -119,7 +119,7 @@ const Masonry: React.FC<MasonryProps> = ({
       default:
         return { x: item.x, y: item.y + 100 };
     }
-  };
+  }, [animateFrom, containerRef]);
 
   useEffect(() => {
     preloadImages(items.map(i => i.img)).then(() => setImagesReady(true));
@@ -187,7 +187,7 @@ const Masonry: React.FC<MasonryProps> = ({
     });
 
     hasMounted.current = true;
-  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
+  }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease, getInitialPosition]);
 
   const handleMouseEnter = (e: React.MouseEvent, item: GridItem) => {
     const element = e.currentTarget as HTMLElement;
