@@ -130,7 +130,10 @@ const useResponsiveDimension = (
     if (!responsive) return;
     const calc = () => {
       const w = window.innerWidth;
-      let v: string | number | undefined = config[key];
+      let v: string | number | undefined = (() => {
+        const value = config[key];
+        return typeof value === 'string' || typeof value === 'number' ? value : undefined;
+      })();
       const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
       const k = cap(key as string);
       const configWithResponsive = config as Record<string, string | number | undefined>;

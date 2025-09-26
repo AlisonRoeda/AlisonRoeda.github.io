@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FloatModePhotography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
@@ -232,9 +233,11 @@ export default function FloatModePhotography() {
                   className="relative cursor-pointer group"
                   onClick={() => openModal(photo)}
                 >
-                  <img
+                  <Image
                     src={photo}
                     alt={`Photo ${index + 1}`}
+                    width={128}
+                    height={128}
                     className="w-32 h-32 object-cover rounded-lg shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:shadow-xl border-2 border-white/30"
                   />
                 </div>
@@ -285,10 +288,13 @@ export default function FloatModePhotography() {
             >
               ×
             </button>
-            <img
+            <Image
               src={selectedPhoto}
               alt="Enlarged photo"
+              width={1200}
+              height={800}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              priority
             />
           </div>
         </div>
