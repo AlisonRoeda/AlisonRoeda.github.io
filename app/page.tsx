@@ -199,13 +199,13 @@ export default function Home() {
       </div>
 
       {/* About Section - Flush with Girl image */}
-      <div className="relative z-10 bg-white min-h-screen flex items-center">
-        <div className="max-w-4xl mx-auto px-4 py-20">
+      <div className="relative z-10 bg-black min-h-screen flex items-center">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 py-20">
           <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black text-slate-700 mb-6 md:mb-8 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 md:mb-8 tracking-tight" style={{ color: '#B9D5E3' }}>
               ABOUT ME
             </h2>
-            <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            <div className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto" style={{ color: '#B9D5E3' }}>
               <p>
                 I&apos;m a creative with a deep passion for technology and its power to open doors. I believe 
                 innovation should make creativity and entrepreneurship accessible to everyone, not just a select few.
@@ -217,7 +217,13 @@ export default function Home() {
               <div className="pt-6 md:pt-8 space-y-4 md:space-y-6">
                 <a
                   href="mailto:alisonroeda@gmail.com"
-                  className="inline-block bg-slate-700 text-white px-6 py-3 md:px-8 md:py-4 font-bold text-base md:text-lg uppercase tracking-wider hover:bg-slate-600 transition-colors duration-200"
+                  className="inline-block px-6 py-3 md:px-8 md:py-4 font-bold text-base md:text-lg uppercase tracking-wider transition-all duration-300 rounded-2xl shadow-2xl hover:shadow-3xl cursor-pointer"
+                  style={{ 
+                    pointerEvents: 'auto',
+                    background: 'transparent',
+                    border: '2px solid #B9D5E3',
+                    color: '#B9D5E3'
+                  }}
                 >
                   Get In Touch
                 </a>
@@ -227,7 +233,13 @@ export default function Home() {
                     href="https://www.instagram.com/alisonroeda"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all duration-200 hover:shadow-md border border-slate-200 text-sm md:text-base"
+                    className="px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg text-sm md:text-base cursor-pointer"
+                    style={{ 
+                      pointerEvents: 'auto',
+                      background: 'transparent',
+                      border: '2px solid #B9D5E3',
+                      color: '#B9D5E3'
+                    }}
                   >
                     Instagram: @alisonroeda
                   </a>
@@ -235,7 +247,13 @@ export default function Home() {
                     href="https://www.linkedin.com/in/alison-roeda/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all duration-200 hover:shadow-md border border-slate-200 text-sm md:text-base"
+                    className="px-4 py-2 md:px-6 md:py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg text-sm md:text-base cursor-pointer"
+                    style={{ 
+                      pointerEvents: 'auto',
+                      background: 'transparent',
+                      border: '2px solid #B9D5E3',
+                      color: '#B9D5E3'
+                    }}
                   >
                     LinkedIn: @alison-roeda
                   </a>
