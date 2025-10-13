@@ -9,6 +9,7 @@ export default function Photography() {
 
   // Photos in shuffled order (no numbers)
   const photos = [
+    "/images/photography/YOUANDME.PNG",
     "/images/photography/IMG_4601.JPG",
     "/images/photography/13E359F1-7897-4467-88A9-E6646E2F5D5E 2.JPG",
     "/images/photography/609248BD-C482-45FE-90AA-8D1B8559BFED 2.JPEG",
@@ -44,17 +45,21 @@ export default function Photography() {
   };
 
   return (
-    <div className="min-h-screen bg-white p-8">
-      {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-6xl font-black text-black mb-4">PHOTOGRAPHY</h1>
-        <Link
-          href="/"
-          className="bg-black text-white px-6 py-3 font-bold text-sm uppercase tracking-wider hover:bg-gray-800 transition-colors duration-200 rounded-lg"
-        >
-          ← Back to Home
-        </Link>
-      </div>
+    <div className="min-h-screen bg-black p-8">
+        {/* Header */}
+        <div className="mb-8">
+          <h1 className="text-6xl font-black text-white mb-4">SELF-PORTRAIT PHOTOGRAPHY</h1>
+          <Link
+            href="/"
+            className="inline-block text-white px-6 py-3 font-bold text-sm uppercase tracking-wider transition-all duration-300 rounded-lg border border-gray-600 hover:border-gray-400"
+            style={{
+              background: 'transparent',
+              color: '#B9D5E3'
+            }}
+          >
+            ← Back to Home
+          </Link>
+        </div>
 
       {/* Masonry-style Photo Layout - No Numbers */}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
@@ -69,7 +74,7 @@ export default function Photography() {
               alt={`Photography ${index + 1}`}
               width={400}
               height={600}
-              className="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className="w-full h-auto rounded-lg shadow-2xl hover:shadow-3xl transition-shadow border border-gray-700"
               loading="lazy"
             />
           </div>

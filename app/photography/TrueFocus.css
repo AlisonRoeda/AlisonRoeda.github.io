@@ -1,0 +1,82 @@
+.focus-container {
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+  text-align: center;
+}
+
+.focus-word {
+  display: inline-block;
+  margin: 0 0.2em;
+  padding: 0.2em 0.4em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.focus-word.manual:hover {
+  transform: scale(1.05);
+}
+
+.focus-word.active {
+  color: var(--border-color, green);
+  text-shadow: 0 0 10px var(--glow-color, rgba(0, 255, 0, 0.6));
+}
+
+.focus-frame {
+  position: absolute;
+  pointer-events: none;
+  border: 2px solid var(--border-color, green);
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px var(--glow-color, rgba(0, 255, 0, 0.6)),
+    inset 0 0 20px var(--glow-color, rgba(0, 255, 0, 0.3));
+  background: white;
+  z-index: 10;
+}
+
+.focus-frame .corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--border-color, green);
+  background: var(--glow-color, rgba(0, 255, 0, 0.8));
+  border-radius: 2px;
+}
+
+.focus-frame .corner.top-left {
+  top: -6px;
+  left: -6px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.focus-frame .corner.top-right {
+  top: -6px;
+  right: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.focus-frame .corner.bottom-left {
+  bottom: -6px;
+  left: -6px;
+  border-right: none;
+  border-top: none;
+}
+
+.focus-frame .corner.bottom-right {
+  bottom: -6px;
+  right: -6px;
+  border-left: none;
+  border-top: none;
+}
+
+@media (max-width: 768px) {
+  .focus-container {
+    font-size: 2rem;
+  }
+}
