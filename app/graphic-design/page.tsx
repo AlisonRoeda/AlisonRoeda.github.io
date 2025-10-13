@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 import TextPressure from "@/components/TextPressure";
 import GradualBlur from "@/components/GradualBlur";
 
@@ -84,9 +85,11 @@ export default function GraphicDesign() {
             className="break-inside-avoid mb-4 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => openModal(image)}
           >
-            <img
+            <Image
               src={image}
               alt={`Graphic Design ${index + 1}`}
+              width={400}
+              height={600}
               className="w-full h-auto rounded-lg shadow-lg hover:shadow-xl transition-shadow"
               loading="lazy"
             />
@@ -108,10 +111,13 @@ export default function GraphicDesign() {
             >
               ×
             </button>
-            <img
+            <Image
               src={selectedImage}
               alt="Enlarged image"
+              width={1200}
+              height={800}
               className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              priority
             />
           </div>
         </div>
