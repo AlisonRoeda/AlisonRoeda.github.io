@@ -22,7 +22,7 @@ export default function Projects() {
       title: "Tree Simulator",
       category: "Game Development",
       description: "An immersive Unity-based tree simulation game that explores the lifecycle and growth patterns of trees in various environments.",
-      image: "/images/projects/TreeSim.png",
+      image: "/images/projects/Treesim.png",
       link: "https://play.unity.com/en/games/74d6626a-1486-46e6-964a-35c5ec5c6890/tree-simulator",
       github: "https://github.com/AlisonRoeda/Tree-Simulator-",
       technologies: ["Unity", "C#", "3D Graphics", "Game Design"],
@@ -60,13 +60,13 @@ export default function Projects() {
         <LiquidEther
           colors={['#6366F1', '#8B5CF6', '#A855F7', '#C084FC', '#72c7f3']}
           mouseForce={80}
-          cursorSize={20}
+          cursorSize={40}
           resolution={0.4}
           autoDemo={false}
           isViscous={true}
           viscous={70}
-          iterationsViscous={70}
-          iterationsPoisson={70}
+          iterationsViscous={50}
+          iterationsPoisson={50}
           dt={0.016}
           key="liquid-ether-stable"
           style={{ 
