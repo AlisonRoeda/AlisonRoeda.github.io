@@ -141,6 +141,7 @@ export default function Home() {
             <Link
               href="/projects"
               className="group block w-full"
+              style={{ pointerEvents: 'auto' }}
             >
               <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
                 <h2 className="text-lg font-black text-black uppercase tracking-wider">
@@ -152,6 +153,7 @@ export default function Home() {
             <Link
               href="/art"
               className="group block w-full"
+              style={{ pointerEvents: 'auto' }}
             >
               <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
                 <h2 className="text-lg font-black text-black uppercase tracking-wider">
@@ -163,6 +165,7 @@ export default function Home() {
             <Link
               href="/graphic-design"
               className="group block w-full"
+              style={{ pointerEvents: 'auto' }}
             >
               <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
                 <h2 className="text-lg font-black text-black uppercase tracking-wider">
@@ -174,6 +177,7 @@ export default function Home() {
             <Link
               href="/photography"
               className="group block w-full"
+              style={{ pointerEvents: 'auto' }}
             >
               <div className="bg-white border-6 border-white px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full shadow-lg">
                 <h2 className="text-lg font-black text-black uppercase tracking-wider">
