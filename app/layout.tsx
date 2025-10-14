@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alison Roeda - Graphic Designer & Portrait Photographer",
-  description: "Personal portfolio showcasing graphic design work and portrait photography by Alison Roeda",
+  title: "Alison Roeda - Creative Portfolio",
+  description: "Personal portfolio showcasing creative work, projects, and innovative solutions by Alison Roeda",
 };
 
 export default function RootLayout({
