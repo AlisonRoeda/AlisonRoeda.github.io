@@ -4,7 +4,6 @@ import { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import LiquidEther from "../components/LiquidEther";
-import TextPressure from "@/components/TextPressure";
 
 export default function Projects() {
   const [isLightMode, setIsLightMode] = useState(false);
