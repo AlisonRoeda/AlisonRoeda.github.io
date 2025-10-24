@@ -114,7 +114,7 @@ export default function Projects() {
       </button>
 
       {/* Header Section */}
-      <div className="pt-20 pb-16">
+      <div className="pt-20 pb-16 relative z-10">
         <div className="text-center">
           <h1 className={`text-6xl font-black ${isLightMode ? 'text-black' : 'text-white'}`}>
             PROJECTS
@@ -123,12 +123,12 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-6xl mx-auto py-8">
+      <div className="max-w-6xl mx-auto py-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
-              className={`group rounded-lg overflow-hidden border transition-all duration-300 ${
+              className={`group rounded-lg overflow-hidden border transition-all duration-300 relative z-10 ${
                 isLightMode 
                   ? 'bg-white border-gray-300 hover:border-gray-400 shadow-lg' 
                   : 'bg-black border-gray-800 hover:border-gray-700'
