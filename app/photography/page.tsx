@@ -3,9 +3,11 @@
 import { useState } from 'react';
 import Link from "next/link";
 import Image from "next/image";
+import TextPressure from "@/components/TextPressure";
 
 export default function Photography() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   // Photos in shuffled order (no numbers)
   const photos = [
@@ -33,7 +35,23 @@ export default function Photography() {
     "/images/photography/fullbodyBlue2.PNG",
     "/images/photography/B24F9C15-982D-482C-9574-8967B4848F7A 2.JPEG",
     "/images/photography/D7707D25-4703-4D9D-B371-3FE6DF35AE5A.JPG",
-    "/images/photography/E0837465-02F7-41E2-9D25-02322AF4A774 2.JPEG"
+    "/images/photography/E0837465-02F7-41E2-9D25-02322AF4A774 2.JPEG",
+    "/images/photography/2D040655-A36E-45CF-AE5B-99F9E49B30FF.jpg",
+    "/images/photography/3E056757-F1BD-44DC-809E-24647FE6B7AD.JPEG",
+    "/images/photography/3FB42332-248C-4D0D-8B97-1BFE1BB7E7E7.JPG",
+    "/images/photography/438E95EA-F58D-4252-BAC2-61484BB109F4.JPEG",
+    "/images/photography/8AB1A98F-298E-4B80-AF93-0AB4159C2098.JPG",
+    "/images/photography/9BAAA546-FACF-4924-8A74-9A2A3FD95D91.JPEG",
+    "/images/photography/9BEDE9AA-760E-43BD-9B71-73659540861C.JPG",
+    "/images/photography/C6A22C9B-9DDE-48D1-862F-E4281046C24D.JPEG",
+    "/images/photography/D1F377F7-0355-4C9A-9D34-7757C77776D5.jpg",
+    "/images/photography/ECF302C4-5572-4EFA-A2D8-745E42608F8C.JPEG",
+    "/images/photography/EFECEA32-EE2B-4DF5-B5E9-3FF3D58CD4C6 2.JPEG",
+    "/images/photography/F73D9B28-29E6-43A2-BC63-92B2BD21B091.JPG",
+    "/images/photography/IMG_1097 2.JPG",
+    "/images/photography/IMG_3684.jpg",
+    "/images/photography/IMG_6352.JPG",
+    "/images/photography/IMG_8128.JPG"
   ];
 
   const openModal = (src: string) => {
@@ -45,21 +63,48 @@ export default function Photography() {
   };
 
   return (
-    <div className="min-h-screen bg-black p-8">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-6xl font-black text-white mb-4">SELF-PORTRAIT PHOTOGRAPHY</h1>
-          <Link
-            href="/"
-            className="inline-block text-white px-6 py-3 font-bold text-sm uppercase tracking-wider transition-all duration-300 rounded-lg border border-gray-600 hover:border-gray-400"
-            style={{
-              background: 'transparent',
-              color: '#B9D5E3'
-            }}
-          >
-            ← Back to Home
-          </Link>
+    <div className={`min-h-screen p-8 ${isLightMode ? 'bg-gray-50' : 'bg-black'}`}>
+      {/* Floating Back Button */}
+      <Link
+        href="/"
+        className={`fixed top-6 left-6 z-50 px-4 py-2 font-bold text-sm uppercase tracking-wider transition-colors duration-200 rounded-lg shadow-lg ${
+          isLightMode 
+            ? 'bg-white text-black border-2 border-black hover:bg-gray-100' 
+            : 'bg-black text-white border-2 border-white hover:bg-gray-800'
+        }`}
+      >
+        ← Back to Home
+      </Link>
+
+      {/* Light Mode Toggle Button */}
+      <button
+        onClick={() => setIsLightMode(!isLightMode)}
+        className={`fixed top-6 right-6 z-50 w-12 h-12 rounded-full transition-colors duration-200 shadow-lg ${
+          isLightMode 
+            ? 'bg-black hover:bg-gray-800' 
+            : 'bg-white hover:bg-gray-100'
+        }`}
+        style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      >
+        <span style={{ fontSize: '20px', lineHeight: '1', color: isLightMode ? 'white' : 'black' }}>
+          {isLightMode ? '★' : '◐'}
+        </span>
+      </button>
+
+      {/* Header */}
+      <div className="pt-20 pb-20 mb-12">
+        <div className={`text-2xl font-thin mb-2 ${isLightMode ? 'text-black' : 'text-white'}`} style={{ fontFamily: 'sans-serif' }}>
+          SELF-PORTRAIT
         </div>
+        <div className="h-40 flex items-center">
+          <TextPressure
+            text="PHOTOGRAPHY"
+            textColor={isLightMode ? "#000000" : "#FFFFFF"}
+            minFontSize={48}
+            className="w-full h-full"
+          />
+        </div>
+      </div>
 
       {/* Masonry-style Photo Layout - No Numbers */}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
@@ -74,7 +119,7 @@ export default function Photography() {
               alt={`Photography ${index + 1}`}
               width={400}
               height={600}
-              className="w-full h-auto rounded-lg shadow-2xl hover:shadow-3xl transition-shadow border border-gray-700"
+              className="w-full h-auto rounded-lg shadow-2xl hover:shadow-3xl transition-shadow border-2 border-black"
               loading="lazy"
             />
           </div>
@@ -84,13 +129,17 @@ export default function Photography() {
       {/* Simple Modal */}
       {selectedPhoto && (
         <div 
-          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50"
+          className={`fixed inset-0 flex items-center justify-center p-4 z-50 ${
+            isLightMode ? 'bg-white bg-opacity-95' : 'bg-black bg-opacity-90'
+          }`}
           onClick={closeModal}
         >
           <div className="relative max-w-6xl max-h-full">
             <button
               onClick={closeModal}
-              className="absolute -top-12 right-0 text-white text-4xl hover:text-gray-300"
+              className={`absolute -top-12 right-0 text-4xl ${
+                isLightMode ? 'text-black hover:text-gray-600' : 'text-white hover:text-gray-300'
+              }`}
             >
               ×
             </button>
