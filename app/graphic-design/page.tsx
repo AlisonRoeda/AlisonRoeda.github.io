@@ -33,7 +33,8 @@ export default function GraphicDesign() {
       ],
       singleRow: true,
       fixedHeight: true,
-      snugSpacing: true
+      snugSpacing: true,
+      noBox: true
     },
     {
       title: "PRODUCT STUDIO",
@@ -162,7 +163,7 @@ export default function GraphicDesign() {
                       alt={`${group.title} ${imageIndex + 1}`}
                       width={group.originalLayout ? 400 : 200}
                       height={group.originalLayout ? 600 : 200}
-                      className={`${group.originalLayout ? 'w-full h-auto' : (group.fixedHeight ? 'w-full h-64 object-contain' : (group.biggerSize ? 'w-full h-80 object-contain' : 'w-48 h-48 object-contain'))} rounded-lg shadow-lg hover:shadow-xl transition-shadow`}
+                      className={`${group.originalLayout ? 'w-full h-auto' : (group.fixedHeight ? 'w-full h-64 object-contain' : (group.biggerSize ? 'w-full h-80 object-contain' : 'w-48 h-48 object-contain'))} ${group.noBox ? '' : 'rounded-lg shadow-lg hover:shadow-xl'} transition-shadow`}
                       loading="lazy"
                       unoptimized={image.includes('.GIF')}
                     />
