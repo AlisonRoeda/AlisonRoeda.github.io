@@ -195,7 +195,7 @@ export default function GraphicDesign() {
                 })}
               </div>
             ) : (
-              <div className="columns-1 sm:columns-3 md:columns-4 lg:columns-5 gap-2 space-y-2">
+              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-2 space-y-2">
                 {group.images.map((image, imageIndex) => (
                   <div
                     key={imageIndex}
