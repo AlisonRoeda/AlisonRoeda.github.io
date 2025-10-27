@@ -171,7 +171,7 @@ export default function GraphicDesign() {
                 ))}
               </div>
             ) : group.mixedLayout ? (
-              <div className="columns-1 sm:columns-3 md:columns-4 lg:columns-5 gap-2 space-y-2">
+              <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-2 space-y-2">
                 {group.images.map((image, imageIndex) => {
                   // Randomly select some images to be featured (larger)
                   const isFeatured = [0, 2, 5].includes(imageIndex); // Frame2-1, Insta Slide 1, Twitter post
