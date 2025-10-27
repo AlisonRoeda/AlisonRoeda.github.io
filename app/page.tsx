@@ -143,10 +143,10 @@ export default function Home() {
               className="group block w-full"
               style={{ pointerEvents: 'auto' }}
             >
-              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/30 shadow-2xl hover:shadow-3xl"
+              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/50 shadow-2xl hover:shadow-3xl"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%)',
-                     boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)'
+                     background: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)',
+                     boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)'
                    }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <h2 className="relative text-lg font-black text-white uppercase tracking-wider drop-shadow-lg">
@@ -160,10 +160,10 @@ export default function Home() {
               className="group block w-full"
               style={{ pointerEvents: 'auto' }}
             >
-              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/30 shadow-2xl hover:shadow-3xl"
+              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/50 shadow-2xl hover:shadow-3xl"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%)',
-                     boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)'
+                     background: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)',
+                     boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)'
                    }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <h2 className="relative text-lg font-black text-white uppercase tracking-wider drop-shadow-lg">
@@ -177,10 +177,10 @@ export default function Home() {
               className="group block w-full"
               style={{ pointerEvents: 'auto' }}
             >
-              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/30 shadow-2xl hover:shadow-3xl"
+              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/50 shadow-2xl hover:shadow-3xl"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%)',
-                     boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)'
+                     background: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)',
+                     boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)'
                    }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <h2 className="relative text-lg font-black text-white uppercase tracking-wider drop-shadow-lg">
@@ -194,10 +194,10 @@ export default function Home() {
               className="group block w-full"
               style={{ pointerEvents: 'auto' }}
             >
-              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/30 shadow-2xl hover:shadow-3xl"
+              <div className="relative px-6 py-4 text-center transition-all duration-300 active:scale-95 rounded-full overflow-hidden backdrop-blur-md border border-white/50 shadow-2xl hover:shadow-3xl"
                    style={{
-                     background: 'linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.15) 100%)',
-                     boxShadow: '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3)'
+                     background: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%)',
+                     boxShadow: '0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2)'
                    }}>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out"></div>
                 <h2 className="relative text-lg font-black text-white uppercase tracking-wider drop-shadow-lg">

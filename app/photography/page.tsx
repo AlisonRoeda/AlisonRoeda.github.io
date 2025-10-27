@@ -107,7 +107,7 @@ export default function Photography() {
       </div>
 
       {/* Masonry-style Photo Layout - No Numbers */}
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+      <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {photos.map((photo, index) => (
           <div
             key={index}
