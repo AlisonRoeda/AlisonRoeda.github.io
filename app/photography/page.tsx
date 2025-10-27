@@ -92,7 +92,7 @@ export default function Photography() {
       </button>
 
       {/* Header */}
-      <div className="pt-20 pb-20 mb-6 sm:mb-12">
+      <div className="pt-20 pb-20 mb-2 sm:mb-12">
         <div className={`text-2xl font-thin mb-2 ${isLightMode ? 'text-black' : 'text-white'}`} style={{ fontFamily: 'sans-serif' }}>
           SELF-PORTRAIT
         </div>
