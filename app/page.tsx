@@ -36,7 +36,7 @@ export default function Home() {
           src="/images/BG3.png?v=4"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-cover scale-75 sm:scale-100"
           priority
         />
       </div>
@@ -48,7 +48,7 @@ export default function Home() {
           alt="Girl"
           width={800}
           height={1000}
-          className="w-full h-screen object-cover"
+          className="w-full h-screen object-cover scale-75 sm:scale-100"
           priority
         />
           
